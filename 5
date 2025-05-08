@@ -1,0 +1,27 @@
+#1 решение
+from math import ceil
+def main(y, x, z):
+    n = len(z)
+    y.insert(0, 0)
+    x.insert(0, 0)
+    z.insert(0, 0)
+    summa = 0
+    for i in range(1, n + 1):
+        step1 = 33 * z[i]
+        step2 = 28 * y[n + 1 - i] ** 3
+        step3 = x[ceil(i / 3)] ** 2
+        summa += 52 * (step1 - step2 - step3) ** 6
+    return 87 * summa
+
+#2 решение
+from math import ceil
+def main(y, x, z):
+    summa = 0
+    for i in range(1, len(y) + 1):
+        summa += (
+             (52 * ((33 * z[i - 1] -
+                     28 * y[len(y) - i] ** 3 -
+                     x[ceil(i / 3) - 1] ** 2) ** 6))
+        )
+    return 87 * summa
+
