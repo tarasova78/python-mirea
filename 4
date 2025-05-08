@@ -1,0 +1,9 @@
+#1 решение
+def main(n):
+    if n == 0:
+        return 0.93
+    else:
+        previous_value = main(n - 1)
+        return 4 * previous_value - 1 - previous_value ** 3
+
+#2 решение
