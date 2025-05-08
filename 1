@@ -21,3 +21,14 @@ def main(y, x, z):
           57 * pow(pow(z, 2) - 1 - z / 89, 5))) + (55 * pow(math.cos(z), 2))
     c = (46 * pow(pow(x, 2) - pow(x, 3) - 36 * y, 4))
     return a - c
+
+#3 решение
+from math import cos
+from math import log
+
+
+def main(y, x, z):
+    return (((0.01 + 52 * pow(33 * z - 28 * pow(y, 3) - pow(x, 2), 2)) / (
+        log(x + 1 + pow(y, 3) / 97, 2) +
+        57 * pow(pow(z, 2) - 1 - z / 89, 5))) + (55 * pow(cos(z), 2)) -
+        (46 * pow(pow(x, 2) - pow(x, 3) - 36 * y, 4)))
