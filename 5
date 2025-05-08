@@ -25,3 +25,9 @@ def main(y, x, z):
         )
     return 87 * summa
 
+#3 решение
+import math
+def main(y, x, z):
+    return 87 * sum([(
+        52 * ((33 * z[i] - 28 * y[len(y) - 1 - i] ** 3 -
+               x[i // 3] ** 2) ** 6)) for i in range(len(y))])
