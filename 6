@@ -1,0 +1,8 @@
+#1 решение
+import math
+def main(A):
+    H = {abs(a) + 5 * a for a in A if a > 97 or a <= -16}
+    O_set = {abs(a) + a ** 2 for a in A if a >= -96}
+    T = {o ** 2 for o in O_set if o > 89 or o <= -2}
+    mu = len(H | T) - sum(p // 7 for p in T)
+    return mu
