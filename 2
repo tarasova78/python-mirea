@@ -13,4 +13,13 @@ def main(x):
         return (60 * x**2)**2 + (math.log(6, 2) * x) + x**7
 
 #2 решение
+import math
 
+
+def main(x):
+    return (
+        51 * x ** 4 + 78 * x ** 6 if x < 26 else
+        74 * x ** 4 + x ** 2 if 26 <= x < 108 else
+        5 * (8 * x ** 2) ** 5 - 1 - ((67 * x) ** 6) / 44 if 108 <= x < 122 else
+        (60 * x ** 2) ** 2 + (math.log(6, 2)) * x + x ** 7
+    )
