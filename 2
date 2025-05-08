@@ -1,1 +1,16 @@
+#1 решение
+import math
+
+
+def main(x):
+    if x < 26:
+        return 51 * x**4 + 78 * x**6
+    elif 26 <= x < 108:
+        return 74 * x**4 + x**2
+    elif 108 <= x < 122:
+        return 5 * (8 * x**2)**5 - 1 - (67 * x**6) / 44
+    else:
+        return (60 * x**2)**2 + (math.log(6, 2) * x) + x**7
+
+#2 решение
 
