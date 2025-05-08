@@ -1,0 +1,23 @@
+
+# 1
+import math
+
+
+def main(y, x, z):
+    ch1 = 0.01 + 52 * (33 * z - 28 * y ** 3 - x ** 2) ** 2
+    ch2 = math.log2(x + 1 + (y ** 3 / 97)) + 57 * (z ** 2 - 1 - (z / 89)) ** 5
+    ch3 = 55 * (math.cos(z)) ** 2
+    ch4 = 46 * (x ** 2 - x ** 3 - 36 * y) ** 4
+    result = (ch1 / ch2) + ch3 - ch4
+    return result
+
+# 2 решение
+import math
+
+
+def main(y, x, z):
+    a = ((0.01 + 52 * pow(33 * z - 28 * pow(y, 3) - pow(x, 2), 2)) /
+         (math.log(x + 1 + pow(y, 3) / 97, 2) +
+          57 * pow(pow(z, 2) - 1 - z / 89, 5))) + (55 * pow(math.cos(z), 2))
+    c = (46 * pow(pow(x, 2) - pow(x, 3) - 36 * y, 4))
+    return a - c
