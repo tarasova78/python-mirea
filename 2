@@ -23,3 +23,20 @@ def main(x):
         5 * (8 * x ** 2) ** 5 - 1 - ((67 * x) ** 6) / 44 if 108 <= x < 122 else
         (60 * x ** 2) ** 2 + (math.log(6, 2)) * x + x ** 7
     )
+
+#3 решение
+import math
+
+
+def main(x):
+    conditions = {
+        x < 26: lambda: 51 * x ** 4 + 78 * x ** 6,
+        26 <= x < 108: lambda: 74 * x ** 4 + x ** 2,
+        108 <= x < 122:
+            lambda:
+            5 * (8 * x ** 2) ** 5 - 1 - ((67 * x) ** 6) / 44,
+        x >= 122: lambda: (60 * x ** 2) ** 2 + (math.log(6, 2)) * x + x ** 7
+    }
+    for condition, expression in conditions.items():
+        if condition:
+            return expression()
